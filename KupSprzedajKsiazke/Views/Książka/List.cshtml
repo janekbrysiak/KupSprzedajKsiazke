@@ -1,0 +1,17 @@
+﻿@model KupSprzedajKsiazke.Models.ViewModels.KsiazkiListViewModel
+
+@foreach(var k in Model.Ksiazki)
+{
+    <div>
+        <h3>@k.Nazwa</h3>
+        @k.Opis
+        @k.Kategoria
+        <h4>@k.Cena.ToString("c")</h4> 
+    </div>
+
+}
+
+<div page-model="@Model.PagingInfo" page-action="List"></div>
+
+
+
